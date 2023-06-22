@@ -1,0 +1,20 @@
+package ${packageName}.common.exception;
+
+import lombok.Getter;
+
+@Getter
+public class ServiceException extends Exception {
+
+    private final int status;
+
+    public ServiceException(String message) {
+        super(message);
+        this.status = 500;
+    }
+
+    public ServiceException(String message, int status) {
+        super(message);
+        this.status = status;
+    }
+
+}

@@ -1,0 +1,13 @@
+package ${packageName}.common.exception;
+
+public class DaoException extends ServiceException {
+
+    public DaoException(String message) {
+        super(message);
+    }
+
+    public DaoException(String message, int status) {
+        super(message, status);
+    }
+
+}

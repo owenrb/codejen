@@ -1,0 +1,20 @@
+package ${packageName}.common.dao;
+
+import java.util.Optional;
+import java.util.Set;
+
+import ${packageName}.common.exception.DaoException;
+
+public interface IDao<V, I, F> {
+
+    Optional<V> create(V vo) throws DaoException;
+
+    Optional<V> read(
+            I id) throws DaoException;
+
+    Optional<V> update(I id, V vo) throws DaoException;
+
+    int delete(I id) throws DaoException;
+
+    Set<V> search(F filter) throws DaoException;
+}
